@@ -1,0 +1,27 @@
+.update-container{
+background-color: rgb(250, 244, 244);
+width: 90%;
+margin-left: 5%;
+margin-right: 5%;
+
+
+
+}
+.update-container-box{
+    /* background-color: blue; */
+    margin: 50px;
+    max-height: 500px;
+    overflow-y: scroll;
+    
+   
+
+}
+.div-item{
+    font: 400 1.5vmax cursive;
+}
+
+@media screen and (max-width: 600px){
+    .div-item{
+        font: 400 2.5vmax cursive;
+    }
+}

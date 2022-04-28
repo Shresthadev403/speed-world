@@ -1,0 +1,45 @@
+.container{
+    /* background-color: red; */
+    display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+}
+
+.comment-box{
+  position: fixed;
+  width: 100%;
+  
+  
+  /* background-color: aquamarine; */
+  z-index: 9;
+}
+
+.detailbox{
+    
+     background-color: rgb(206, 207, 233);
+    margin: 2px;
+    /* background-color: #f1f1f1; */
+  padding: 10px;
+  flex: 50%;
+
+}
+
+.orderbox{
+    width: "50vw";
+   
+    background-color: rgb(189, 204, 186);
+    padding: 5px;
+    flex: 50%;
+    
+}
+.admin-product-control{
+  background-color: red;
+  
+}
+
+@media (max-width: 1000px) {
+    .container {
+      flex-direction: column;
+    }
+  }

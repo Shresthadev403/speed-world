@@ -1,0 +1,36 @@
+.commentInput {
+  background-color: rgb(247, 249, 251);
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+
+  width: 96%;
+  margin-left: 2px;
+
+
+ 
+}
+
+.commentInput > svg {
+  height: 40px;
+  width: 40px;
+  float: right;
+  padding: 3px;
+}
+.commentInput > input {
+  width: 97%;
+  border-radius: 5px;
+  height: 40px;
+  font-size: larger;
+  padding-left: 5px;
+}
+
+.loading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: center;
+    height: 100vh;
+  }

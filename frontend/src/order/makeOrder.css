@@ -1,0 +1,148 @@
+.Container {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(231, 231, 231);
+    
+  }
+  
+  .Container-Box {
+    background-color: white;
+    width: 50vw;
+    height: auto;
+    box-sizing: border-box;
+    overflow: scroll;
+  }
+  
+  .loading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: center;
+    height: 100vh;
+  }
+  
+  .Container-header {
+    margin-top: 5px;
+    text-align: center;
+    font-size: large;
+  }
+
+  .order-Tag{
+  
+    font: 400 2.7vmax cursive;
+  }
+ 
+  
+  .Container-Box > div > button {
+    background-color: rgb(95, 92, 247);
+    height: 3px;
+    width: 50%;
+    border: none;
+    transition: all 0.5s;
+  }
+  
+  .Form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 2vmax;
+    justify-content: space-evenly;
+    height: 70%;
+    transition: all 0.5s;
+  }
+  
+  .Form > div {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    font-size: large;
+    padding: 1vh;
+  }
+  
+  .Form > div > input {
+    padding: 0.5vmax 4vmax;
+    padding-right: 1vmax;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.267);
+    border-radius: 4px;
+    font: 300 0.9vmax cursive;
+    outline: none;
+    min-height: 10vh;
+    font-size: large;
+  }
+  
+  .Form > div > svg {
+    position: absolute;
+    transform: translateX(1vmax);
+    font-size: 2.5vmax;
+    color: rgba(0, 0, 0, 0.623);
+  }
+  
+  
+  
+ 
+  
+ 
+  
+ 
+ 
+  
+ 
+  
+  
+  
+  
+  
+  .submitBtn {
+    border: none;
+    background-color: rgb(218, 150, 26);
+    color: white;
+    font: 300 1.9vmax "Roboto";
+    width: 100%;
+    padding: 0.8vmax;
+    cursor: pointer;
+    transition: all 0.5s;
+    border-radius: 4px;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.219);
+  }
+  
+  .submitBtn:hover {
+    background-color: rgb(107, 221, 30);
+  }
+  
+  @media screen and (max-width: 600px) {
+    .Container {
+      background-color: rgb(238, 222, 222);
+      width: 80vw;
+    }
+    .Container-Box {
+      width: 70vw;
+      height: auto;
+      border-radius: 2px;
+    }
+  
+    .Form > div > input {
+      padding: 2.5vmax 5vmax;
+      font: 300 2.7vmax cursive;
+    }
+  
+    .Form > div > svg {
+      font-size: 3.8vmax;
+    }
+  
+  
+    .submitBtn {
+      font: 300 3vmax "Roboto";
+      padding: 1vmax;
+      height: 5vmax;
+      margin: 2vmax;
+    }
+  }
+  

@@ -1,0 +1,228 @@
+.loading{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: center;
+  height: 100vh;
+}
+
+.Container {
+  width: 100vw;
+  height: auto;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(231, 231, 231);
+  
+}
+
+.Container-Box {
+  background-color: white;
+  width: 50vw;
+  height: auto;
+  box-sizing: border-box;
+  overflow: scroll;
+}
+
+.Container-header {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.Container-Box > div > button {
+  background-color: rgb(95, 92, 247);
+  height: 3px;
+  width: 50%;
+  border: none;
+  transition: all 0.5s;
+}
+
+.Form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 2vmax;
+  justify-content: space-evenly;
+  height: 70%;
+  transition: all 0.5s;
+}
+
+.Form > div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  font-size: large;
+  padding: 1vh;
+  position: relative;
+}
+
+.Form > div > input {
+  padding: 0.5vmax 4vmax;
+  padding-right: 1vmax;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.267);
+  border-radius: 4px;
+  font: 300 0.9vmax cursive;
+  outline: none;
+  min-height: 10vh;
+  font-size: large;
+}
+
+.Form > div > svg {
+  position: absolute;
+  transform: translateX(1vmax);
+  font-size: 2.5vmax;
+  color: rgba(0, 0, 0, 0.623);
+
+
+  /* ///////////////// */
+
+  
+
+}
+
+.Form > a {
+  color: rgba(0, 0, 0, 0.651);
+  text-decoration: none;
+  align-self: flex-end;
+  transition: all 0.5s;
+  font: 500 0.8vmax "Gill Sans";
+}
+
+.Form > a:hover {
+  color: black;
+}
+
+.category {
+  margin-left: 2.5vmax;
+  font: 500 2.7vmax cursive;
+  
+ 
+}
+#productImage{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    
+}
+
+#productImage>img {
+     
+        width: 100%;
+        height: 25vmax;
+        object-fit: cover;
+      
+}
+#registerImage >div{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  /* background-color: rgb(221, 221, 231); */
+  text-align: center;
+}
+
+#registerImage >div> input::file-selector-button {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    z-index: 2;
+    height: 6vh;
+    border: solid black;
+    margin: auto;
+    font: 400 1vmax cursive;
+    transition: all 0.5s;
+    padding: 0 1vmax;
+    color: rgba(0, 0, 0, 0.623);
+  background-color: rgb(170, 238, 124);
+  
+    text-align: center;
+    font:400 2.7vmax ;
+    
+  }
+  
+  #registerImage >div > input::file-selector-button:hover {
+    background-color: rgb(235, 235, 235);
+  }
+
+
+
+
+
+.submitBtn {
+  border: none;
+  background-color: rgb(218, 150, 26);
+  color: white;
+  font: 300 1.9vmax "Roboto";
+  width: 100%;
+  padding: 0.8vmax;
+  cursor: pointer;
+  transition: all 0.5s;
+  border-radius: 4px;
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.219);
+}
+
+.submitBtn:hover {
+  background-color: rgb(107, 221, 30);
+}
+
+@media screen and (max-width: 600px) {
+  .Container {
+    background-color: rgb(238, 222, 222);
+    width: 80vw;
+  }
+  .Container-Box {
+    width: 70vw;
+    height: auto;
+    border-radius: 2px;
+  }
+
+  .Form > div > input {
+    padding: 2.5vmax 5vmax;
+    font: 300 2.7vmax cursive;
+  }
+
+  .Form > div > svg {
+    font-size: 3.8vmax;
+  }
+
+  .Form > a {
+    font: 500 1.8vmax "Gill Sans";
+  }
+
+  .category {
+    font: 300 7.7vmax cursive;
+   
+    height: 4vmax;
+  
+  }
+
+  #productImage>img {
+     
+    width: 100%;
+    height: 30vmin;
+    object-fit: cover;
+  
+}
+  
+
+  #registerImage>div > input::file-selector-button {
+    height: 7vh;
+    font: 400 1.8vmax cursive;
+    width: 100%;
+    min-width: 20%;
+   
+   
+  }
+
+  .submitBtn {
+    font: 300 3vmax "Roboto";
+    padding: 1vmax;
+    height: 5vmax;
+    margin: 2vmax;
+  }
+}

@@ -1,0 +1,81 @@
+.loading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: center;
+    height: 100%;
+  }
+
+  .toggle-fit{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    
+  }
+
+
+  .toggle-left{
+width: 33%;
+
+  }
+  .toggle-center{
+   width: 33%;
+   
+  }
+  .toggle-right{
+   width: 33%;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    text-align: center;
+    /* background-color: rgb(187, 194, 194); */
+    width: 100%;
+  }
+  
+  .flex-item-left {
+    /* background-color: #deb3b3; */
+    padding: 10px;
+    flex: 50%;
+    width: 100%;
+  }
+  
+  .flex-item-right {
+    /* background-color: rgb(81, 145, 209); */
+    padding: 10px;
+    flex: 50%;
+    width: 100%;
+  }
+  .flex-data{
+    font: 400 1.7vmax cursive;
+    text-align: left;
+  }
+  
+  /* Responsive layout - makes a one column-layout instead of two-column layout */
+  @media (max-width: 900px) {
+    .flex-container {
+      flex-direction: column;
+    }
+
+    @media (max-width: 500px) {
+      .toggle-fit {
+        flex-direction: column;
+      }
+      .toggle-left{
+        width: 100%;
+      
+          }
+          .toggle-center{
+           width: 100%;
+           
+          }
+          .toggle-right{
+           width:100%;
+       
+           
+          }
+          
+    }
+}
