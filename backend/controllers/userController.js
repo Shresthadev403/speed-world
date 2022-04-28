@@ -14,6 +14,7 @@ exports.createNewUser = async (req, res, next) => {
     folder: "avatars",
     width: 150,
     height: 100,
+    quality: 60,
     crop: "scale",
   });
 
@@ -99,11 +100,13 @@ exports.forgetPassword = (req, res, next) => {
 exports.resetPassword = (req, res, next) => {
   const { token } = req.params;
   const { newpassword, confirmpassword } = req.body;
+  console.log(newpassword,confirmpassword,token);
   if (newpassword != confirmpassword) {
     return next(
       new ErrorHandler(400, "New password and confirm password doesnot match")
     );
   }
+
   User.findOne({ resetPasswordToken: token })
     .then((user) => {
       // console.log(user);

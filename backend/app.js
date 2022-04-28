@@ -11,6 +11,7 @@ const fileUpload=require('express-fileupload');
 const productRoutes=require('./routes/productRoutes');
 const userRoutes=require('./routes/userRoutes');
 const orderRoutes=require('./routes/orderRoutes');
+const contactFormRoutes=require('./routes/contactFormRoutes');
 
 // using middlewares
 app.use(express.json({limit:'50mb', extended: true}));
@@ -33,6 +34,7 @@ app.use(function(req, res, next) {
 app.use('/',productRoutes);
 app.use('/',userRoutes);
 app.use('/',orderRoutes);
+app.use('/',contactFormRoutes);
 
 
 // custom middlewares

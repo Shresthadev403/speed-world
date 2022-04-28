@@ -19,7 +19,7 @@ const orderSchema = mongoose.Schema({
   },
   pinCode: {
     type: Number,
-    required: true,
+   
   },
   phoneNo: {
     type: Number,
@@ -63,8 +63,7 @@ const orderSchema = mongoose.Schema({
     },
   },
   paidDate: {
-    type: Date,
-    required: true,
+    type: Date
   },
   itemPrice: {
     type: Number,
@@ -97,7 +96,16 @@ const orderSchema = mongoose.Schema({
   createdAt:{
       type:Date,
       default:Date.now
+  },
+  deleted:{
+    type:Boolean,
+    default:false
+  },
+  deletedAt:{
+    type:Date,
+      default:Date.now
   }
+
 });
 
 module.exports = mongoose.model("Order", orderSchema);

@@ -15,8 +15,9 @@ exports.createNewProduct = async(req, res, next) => {
   // upload avatar imgage to cloudinary
   const mycloud = await cloudinary.v2.uploader.upload(productImageUpload, {
     folder: "products",
-    width: 150,
-    height: 100,
+    width: 400,
+    height: 450,
+    quality: 100,
     crop: "scale",
   });
   
@@ -54,9 +55,9 @@ exports.getProductDetails = (req, res, next) => {
     });
 };
 
-// get all products in database
+// get all products in database with 
 exports.getAllProducts = async (req, res, next) => {
-  const resultPerPage = 5;
+  const resultPerPage = 6;
   const apiFeatures = new ApiFeatures(Product.find(), req.query)
     .search()
     .filter()
@@ -70,6 +71,34 @@ exports.getAllProducts = async (req, res, next) => {
       return next(new ErrorHandler(404, err));
     });
 };
+
+exports.getAllFeaturedProductsFirst=(req,res,next)=>{
+  const numofDocument=9
+  Product.find().sort({ isFeatured: -1 }).limit(numofDocument).then((products)=>{
+    if(products){
+      return res.status(200).json({ sucess: true, products: products });
+    }
+
+  }).catch((err) => {
+    console.log(err);
+    return next(new ErrorHandler(404, err));
+  });
+};
+
+exports.getStockInfo=(req,res,next)=>{
+
+  Product.find().then(products=>{
+    
+    let stock=new Array();
+    products.map((product,index)=>{
+       stock[index]={"name":product.name,"category":product.category,"stock":product.stock}
+    })
+   // console.log(stock);
+    return res.status(200).json({ sucess: true, stock: stock }); 
+    
+  })
+}
+
 
 // update product info
 exports.updateProduct = (req, res, next) => {
@@ -187,7 +216,7 @@ exports.deleteReview = (req, res, next) => {
 
 // admin get all review of a product
 exports.getAllReviewsOfProduct = (req, res, next) => {
-  Product.findById(req.body.productId)
+  Product.findById(req.params.id)
     .then((product) => {
       if (!product) {
         return next(new ErrorHandler(400, "product not found"));

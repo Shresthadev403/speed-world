@@ -50,6 +50,7 @@ const productSchema = new mongoose.Schema({
   },
   isFeatured: {
     type: Boolean,
+    default:false
   },
   createdAt: {
     type: Date,
@@ -79,6 +80,10 @@ const productSchema = new mongoose.Schema({
         type: String,
         required: true,
       },
+      postedDate:{
+        type:Date,
+        default:Date.now
+      }
     },
   ]
 });
