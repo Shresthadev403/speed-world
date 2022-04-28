@@ -18,7 +18,7 @@ function MyOrder() {
  },[])
  console.log(orders);
 
- if(!orders){
+ if(orders.length==0||!orders){
      return<div style={{width:"100%",textAlign:"center"}}>You have not ordered any items yet</div>
  }
     return ( <>

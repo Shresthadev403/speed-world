@@ -5,8 +5,10 @@ import { Link, useNavigate } from "react-router-dom";
 import MailOutlineIcon from "@material-ui/icons/MailOutline";
 import LockOpenIcon from "@material-ui/icons/LockOpen";
 import FaceIcon from "@material-ui/icons/Face";
+import CircularProgress from "@mui/material/CircularProgress";
 import { login, signUp } from "../controllers/userController";
 import defaultAvatar from "../static/avatar.png"
+import { useSnackbar } from "notistack";
 
 
 function Login (props) {
@@ -15,7 +17,9 @@ function Login (props) {
   const registerTab = useRef(null);
   const switcherTab = useRef(null);
   const navigate=useNavigate();
+  const{enqueueSnackbar}=useSnackbar();
 
+  const[isLoading,setIsLoading]=useState(false);
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
 
@@ -37,13 +41,18 @@ function Login (props) {
         email:loginEmail,
          password:loginPassword
      }
+     setIsLoading(true);
      login(loginData).then(data=>{
          console.log("data",data);
+         setIsLoading(false);
          if(data.sucess){
+          
           changeLoginStatus(true);
           localStorage.setItem('user',JSON.stringify(data.user));
           navigate('/Products');
           
+         }else{
+          enqueueSnackbar(data.error,{variant:"error",autoHideDuration:2000});
          }
          
      });
@@ -59,8 +68,18 @@ function Login (props) {
     myForm.set("avatar", avatar);
   
    console.log("register submit");
+   setIsLoading(true);
+
    signUp(myForm).then(data=>{
-    // console.log(data);
+    console.log(data);
+    setIsLoading(false);
+    if(data.sucess){
+     
+      enqueueSnackbar("Register Sucessful.Please Login",{variant:"success",autoHideDuration:2000});
+    }else{
+      enqueueSnackbar(data.error,{variant:"error",autoHideDuration:2000});
+    }
+   
    })
   };
 
@@ -101,6 +120,12 @@ function Login (props) {
     }
   };
 
+  if(isLoading){
+    console.log("loading");
+    return(<div className="loading">
+    <CircularProgress />
+    </div>)
+  }
 
   
   return (

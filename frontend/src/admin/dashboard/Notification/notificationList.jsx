@@ -59,7 +59,7 @@ function NotificationList(props) {
     console.log("form contact deleted");
     deleteContactForm(contactForm._id).then(data=>{
         if(data.sucess){
-            enqueueSnackbar("form deleted sucessfully",{variant:"success",autoHideDuration:3000});
+            enqueueSnackbar("form deleted sucessfully",{variant:"success",autoHideDuration:2000});
             props.changeIsRendered();
            }
     })
