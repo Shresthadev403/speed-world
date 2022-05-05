@@ -62,7 +62,7 @@ console.log(typeof(dateObj));
     moveToSpamFolder(order._id).then(data=>{
      // console.log(data);
      if(data.sucess){
-      enqueueSnackbar("Spam deleted sucessfully",{variant:"success",autoHideDuration:3000});
+      enqueueSnackbar("Spam deleted sucessfully",{variant:"success",autoHideDuration:2000});
       props.changeIsRendered();
      }
      
@@ -131,7 +131,7 @@ console.log(typeof(dateObj));
         </AccordionSummary>
         {}
         <AccordionDetails theme={theme}>
-          <div className="flex-container" >
+          <div className="flex-container"  style={{ backgroundColor: "rgb(206, 207, 233)" }} >
             {productDetails && (
               <Box
                 className="flex-container-left"
@@ -171,7 +171,7 @@ console.log(typeof(dateObj));
                     minHeight:"150px",
                     maxWidth:"275px"
                   }}>
-  N
+  
 </Avatar>
                   </div>
                 </div>

@@ -39,7 +39,8 @@ const changeIsRendered=()=>{
   }
 
   return (
-    <div>
+    <div style={{backgroundColor:"rgb(235 236 244)"}}>
+       <div className="flex-heading">Spam</div>
       {orders.map((order, index) => {
         return (
           <SpamList key={order._id} order={order} changeIsRendered={changeIsRendered}/>

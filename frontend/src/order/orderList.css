@@ -32,7 +32,7 @@
   border-radius: 5px;
   padding: 2px;
   min-width: 300px;
-  font: 400 2vmax cursive;
+  font: 400 2vmax roboto;
   padding-top: 2px;
 }
 
@@ -42,7 +42,7 @@
     flex-direction: column;
   }
   .details {
-    font: 400 2.7vmax cursive;
+    font: 400 2.7vmax roboto;
     margin: auto;
 
     width: 100%;

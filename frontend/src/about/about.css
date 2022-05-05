@@ -1,0 +1,24 @@
+.story {
+  margin-bottom: 10px;
+}
+
+.details-about {
+  margin-bottom: 10px;
+}
+.image {
+  width: 100%;
+
+ max-width: 800px;
+ margin-bottom: 10px;
+
+}
+.image > img {
+width: 100%;
+  object-fit: cover;
+  
+}
+
+.follow{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

@@ -29,7 +29,7 @@ function Contact() {
           subject: "",
           phoneNo: "",
           email: "",
-          description: "write your problems or queries here",
+          description: "write your problems or queries or request here",
         });
       }
     });
@@ -44,13 +44,16 @@ function Contact() {
   return (
     <div>
       <div style={{ fontSize: "20px" }}>
-        we are reliable and fastest helemt and other products distributors
-        inside kathmandu valley.
+        <h5>Speedworld Helmets</h5>
+       <div className="office-info"><span>Address:</span>samakushi,kathmandu</div>
+       <div className="office-info"><span>Email:</span>speedworldhelmets@gmail.com</div>
+       <div className="office-info"><span>Phone No:</span>9801119843/9861499521/ 9840586194</div>
+
       </div>
       <div>
         <h3>
           If you have any query about us and our products. (Fill up the form
-          below or email us at ............
+          below or email us at speedworldhelmets@gmail.com
         </h3>
       </div>
       <div className="form-container">
@@ -103,7 +106,7 @@ function Contact() {
             <div>Description</div>
             <textarea
               id="w3review"
-              rows="4"
+              rows="5"
               cols="50"
               required
               className="text-area"

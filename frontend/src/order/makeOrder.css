@@ -6,6 +6,7 @@
     justify-content: center;
     align-items: center;
     background-color: rgb(231, 231, 231);
+
     
   }
   
@@ -33,7 +34,7 @@
 
   .order-Tag{
   
-    font: 400 2.7vmax cursive;
+    font: 400 2em roboto;
   }
  
   
@@ -50,10 +51,12 @@
     flex-direction: column;
     align-items: center;
     margin: auto;
-    padding: 2vmax;
-    justify-content: space-evenly;
-    height: 70%;
+    padding: 1.7em;
+    
+   
     transition: all 0.5s;
+    min-height: 520px;
+   
   }
   
   .Form > div {
@@ -61,26 +64,27 @@
     width: 100%;
     align-items: center;
     font-size: large;
-    padding: 1vh;
+    padding: 5px;
   }
   
   .Form > div > input {
-    padding: 0.5vmax 4vmax;
-    padding-right: 1vmax;
+    
+   padding-left: 2.5em;
+   padding-right: 2.5em;
     width: 100%;
     box-sizing: border-box;
     border: 1px solid rgba(0, 0, 0, 0.267);
     border-radius: 4px;
-    font: 300 0.9vmax cursive;
+    font: 300 0.9em roboto;
     outline: none;
-    min-height: 10vh;
+    min-height: 60px;
     font-size: large;
   }
   
   .Form > div > svg {
     position: absolute;
     transform: translateX(1vmax);
-    font-size: 2.5vmax;
+    font-size: 1.5em;
     color: rgba(0, 0, 0, 0.623);
   }
   
@@ -103,9 +107,9 @@
     border: none;
     background-color: rgb(218, 150, 26);
     color: white;
-    font: 300 1.9vmax "Roboto";
+    font: 300 1.9em "Roboto";
     width: 100%;
-    padding: 0.8vmax;
+    padding: 0.8em;
     cursor: pointer;
     transition: all 0.5s;
     border-radius: 4px;
@@ -117,32 +121,41 @@
     background-color: rgb(107, 221, 30);
   }
   
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 800px) {
     .Container {
       background-color: rgb(238, 222, 222);
-      width: 80vw;
+      width: 100%;
+      margin: 0;
     }
     .Container-Box {
-      width: 70vw;
+      width: 80vw;
       height: auto;
       border-radius: 2px;
+      min-width: 260px;
+      max-width: 417px;
+      
     }
+    
   
     .Form > div > input {
-      padding: 2.5vmax 5vmax;
-      font: 300 2.7vmax cursive;
+     
+      font: 300 0.9em roboto;
+      padding-left: 1.7em;
+     
+      
     }
   
     .Form > div > svg {
-      font-size: 3.8vmax;
+      font-size: 1.2em;
+      z-index: 1;
     }
   
   
     .submitBtn {
-      font: 300 3vmax "Roboto";
-      padding: 1vmax;
-      height: 5vmax;
-      margin: 2vmax;
+      font: 300 1em "Roboto";
+      padding: 1em;
+      height: 1.5em;
+      margin: 0.5em;
     }
   }
   

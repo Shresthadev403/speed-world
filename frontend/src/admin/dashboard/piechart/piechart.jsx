@@ -13,8 +13,9 @@ if(!props.pieData){
       <h1 className="heading">Your Stock</h1>
       <div  className="piechart">
       <Chart
-        width={"50vw"}
-        height={"50vw"}
+        width={"60vw"}
+        height={"60vw"}
+       
         
        
     

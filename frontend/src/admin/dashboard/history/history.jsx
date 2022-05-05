@@ -39,7 +39,8 @@ const changeIsRendered=()=>{
   }
 
   return (
-    <div>
+    <div style={{backgroundColor:"rgb(235 236 244)"}}>
+      <div className="flex-heading">Your history</div>
       {orders.map((order, index) => {
         return (
           <HistoryList key={order._id} order={order} changeIsRendered={changeIsRendered}/>

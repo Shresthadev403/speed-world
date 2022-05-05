@@ -1,6 +1,7 @@
 
 import React, { Fragment, useRef, useState, useEffect } from "react";
 import "./signUpLogin.css";
+import '../css/global.css'
 import { Link, useNavigate } from "react-router-dom";
 import MailOutlineIcon from "@material-ui/icons/MailOutline";
 import LockOpenIcon from "@material-ui/icons/LockOpen";
@@ -129,7 +130,7 @@ function Login (props) {
 
   
   return (
-        <Fragment>
+        <div className="component">
           <div className="LoginSignUpContainer">
             <div className="LoginSignUpBox">
               <div>
@@ -217,7 +218,7 @@ function Login (props) {
               </form>
             </div>
           </div>
-        </Fragment>
+        </div>
       
     
   );

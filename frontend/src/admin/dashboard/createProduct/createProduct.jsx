@@ -88,10 +88,12 @@ if(isLoading){
 }
   return (
     <div >
-      <div className="Container">
-        <div className="Container-Box">
-          <div className="Container-header">Create Product</div>
-          <form className="Form" onSubmit={handleSubmit}>
+        <div className="Container-x-header">Create Product</div>
+      <div className="Container-x">
+    
+        <div className="Container-x-Box">
+         
+          <form className="Form-x" onSubmit={handleSubmit}>
             <div className="productName">
               <DriveFileRenameOutlineIcon />
               <input
@@ -116,9 +118,9 @@ if(isLoading){
             </div>
             <div>
             <ClassIcon/>
-              <FormControl   sx={{ m: 0.5, minWidth: 100,width:"100vmax"}}>
+              <FormControl   sx={{  width:"100%",backgroundColor:"white"}}>
                  
-                <InputLabel sx={{  font: "300 2.7vmin cursive",}} className="category"  >
+                <InputLabel sx={{  font: "300 0.9em roboto",}} className="category"  >
                   Category
                 </InputLabel>
                 <Select
@@ -131,7 +133,8 @@ if(isLoading){
                   autoWidth
                   label="category" 
                   required
-                  sx={{ minWidth: 120, maxHeight: 50,paddingLeft:"2vmax" }}
+               
+                  sx={{ minWidth:56, maxHeight: 70,paddingLeft:"1.25em" }}
                 >
                   
                   {categories.map((category) => {

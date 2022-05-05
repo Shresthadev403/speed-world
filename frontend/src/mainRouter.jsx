@@ -16,6 +16,9 @@ import Contact from "./contact/contact";
 import About from "./about/about";
 import ForgetPassowrd from "./user/forgetPassowrd";
 import ResetPassword from "./user/resetPassword";
+import Footer from "./footer/footer";
+import TermsAndCondition from "./termsAndCondition/termsAndCondition";
+import PrivacyPolicy from "./privacyPolicy/privacyPolicy";
 
 
 function MainRouter() {
@@ -63,12 +66,21 @@ SetIsLoggedIn(status);
         <Route exact path="/About" element={<About/>}></Route>
         {/* products */}
         <Route exact path="/Products" element={<Products />}></Route>
-        <Route exact path="/product/:productId" element={<Product isLoggedIn={isLoggedIn} isAdmin={isAdmin}   />}></Route>
+        <Route exact path="/Product/:productId" element={<Product isLoggedIn={isLoggedIn} isAdmin={isAdmin}   />}></Route>
 
         {/*admin routes*/}
         <Route exact path="/Dashboard" element={<Dashboard />}></Route>
+
+          {/* website routes */}
+        <Route exact path="/termsandconditions" element={<TermsAndCondition />}></Route>
+        <Route exact path="/privacypolicy" element={<PrivacyPolicy />}></Route>
+
       </Routes>
+   
+  
+    
       </SnackbarProvider>
+      <Footer/>
     </div>
   );
 }

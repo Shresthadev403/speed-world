@@ -68,6 +68,8 @@ function Analytics() {
             <h5> Y-axis:Your Revenue</h5>
           </div>
         </div>
+
+        
         <div className="flex-sidebar">
           <div>
             <Button
@@ -97,7 +99,7 @@ function Analytics() {
             >
               Revenue
               <br />
-              {totalRevenue}
+             NRs. {totalRevenue}
             </Button>
           </div>
           <div>

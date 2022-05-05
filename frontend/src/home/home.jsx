@@ -1,9 +1,12 @@
+import '../css/global.css'
+
 import * as React from 'react';
 import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import ProductCard from '../productcard/productcard';
 import { getAllProducts, getFeaturedProductsFirst } from '../controllers/productControllers';
+import { ClassNames } from '@emotion/react';
 
 function Item(props) {
   const { sx, ...other } = props;
@@ -51,7 +54,7 @@ Item.propTypes = {
     },[]);
 
   return (
-    <div style={{ width: '100%' }}>
+    <div  className='component' style={{ width: '100%' }}>
       <Box
         sx={{
           display: 'flex',

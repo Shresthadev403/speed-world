@@ -1,4 +1,5 @@
 import "./signUpLogin.css";
+import "../css/global.css"
 
 import React, { Fragment, useRef, useState, useEffect } from "react";
 import "./signUpLogin.css";
@@ -38,14 +39,14 @@ function ResetPassowrd() {
       } else {
         enqueueSnackbar(data.error, {
           variant: "error",
-          autoHideDuration: 3000,
+          autoHideDuration: 2000,
         });
       }
     });
   };
 
   return (
-    <div>
+    <div className="component">
       <div
         style={{
           width: "100%",
@@ -57,7 +58,7 @@ function ResetPassowrd() {
       >
         <div style={{ maxWidth: "700px", width: "500px" }}>
           <form className="loginForm" onSubmit={resetSubmit}>
-              <div style={{fontSize:"larger",fontFamily:"cursive"}}>NewPassword</div>
+              <div style={{fontSize:"larger",fontFamily:"roboto"}}>NewPassword</div>
           <div className="signUpPassword">
                   <LockOpenIcon />
                   <input
@@ -69,7 +70,7 @@ function ResetPassowrd() {
                     onChange={e=>{setNewPassword(e.target.value)}}
                   />
                 </div>
-                <div style={{fontSize:"larger",fontFamily:"cursive"}}>Confirm passowrd</div>
+                <div style={{fontSize:"larger",fontFamily:"roboto"}}>Confirm passowrd</div>
                 <div className="signUpPassword">
                   <LockOpenIcon />
                   <input

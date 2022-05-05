@@ -58,7 +58,7 @@ function MakeOrder(props) {
     makeOrder(myForm,productId).then(data=>{
       console.log(data);
       if(data.sucess){
-        enqueueSnackbar("order  sucessfull we will contact you soon",{variant:"success",autoHideDuration:4000});
+        enqueueSnackbar("order  sucessfull we will contact you soon",{variant:"success",autoHideDuration:2000});
         setIsLoading(false);
         setOrder({
           shippingInfo: "",

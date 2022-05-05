@@ -64,7 +64,7 @@ function Products() {
   }, [category, page]);
 
   return (
-    <div style={{ width: "100%" }}>
+    <div className="component" style={{ width: "100%" }}>
       <Box
         sx={{
           display: "flex",
@@ -124,7 +124,7 @@ function Products() {
           products.map((product) => {
             return (
               <Item key={product._id}>
-              <Link to={`/product/${product._id}`}><ProductCard product={product} /></Link>  
+              <Link to={`/Product/${product._id}`}><ProductCard product={product} /></Link>  
               </Item>
             );
           })}

@@ -1,3 +1,5 @@
+import '../css/global.css'
+
 import { Fragment } from "react";
 import * as React from "react";
 import Avatar from "@mui/material/Avatar";
@@ -25,18 +27,18 @@ function MyProfile() {
 const[user,setUser]=React.useState(null);
 React.useEffect(()=>{
 getMyProfile().then(data=>{
- // console.log(data);
+  console.log(data);
   setUser(data.user);
 })
 },[])
 console.log(user);
   return (
-    <Fragment>
+    <div className='component'>
       <div style={{ width: "100%" }}>
         <Avatar
           alt="avatar"
-          src={user?user.avatar.imgage_url:""}
-          sx={{ width: "25vw", height: "25vw", m: 2 }}
+          src={user?user.avatar.image_url:""}
+          sx={{ width: "25vw", height: "25vw", m: 2,minWidth:"180px",minHeight:"180px" }}
         />
       </div>
       <Box
@@ -58,7 +60,7 @@ console.log(user);
           <Typography variant="h3">Role:{user && user.role}</Typography>
         </ThemeProvider>
       </Box>
-    </Fragment>
+    </div>
   );
 }
 

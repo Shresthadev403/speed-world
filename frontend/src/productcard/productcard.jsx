@@ -43,7 +43,7 @@ function ProductCard(props) {
       </CardContent>
       <CardActions>
         <Button size="small">Reviews: {product&&product.numOfReviews}</Button>
-        <Button size="small">Share</Button>
+        
       </CardActions>
     </Card>
   );

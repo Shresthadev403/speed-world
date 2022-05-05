@@ -39,7 +39,8 @@ const changeIsRendered=()=>{
   }
 
   return (
-    <div>
+    <div style={{backgroundColor:"rgb(235 236 244)"}}>
+       <div className="flex-heading">Notification</div>
       {ContactForm.map((contactForm, index) => {
         return (
           <NotificationList key={contactForm._id} contactForm={contactForm} changeIsRendered={changeIsRendered}/>

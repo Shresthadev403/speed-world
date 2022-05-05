@@ -39,7 +39,9 @@ const drawerWidth = 240;
 // styling drawertop margin
 const useStyles = makeStyles({
   drawerPaper: {
-    marginTop:"70px",
+    marginTop:"0px",
+    position:"relative",
+    height:"450px"
 
   },
 });
@@ -120,7 +122,8 @@ export default function Dashboard() {
   },[activeDashboardComponent])
 
   return (
-    <div >
+    <div className="component">
+   
       <Box sx={{ display: "flex" }}>
         <CssBaseline />
        

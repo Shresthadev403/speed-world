@@ -1,0 +1,22 @@
+#footer{
+    color: wheat;
+    background-color: black;
+    bottom: 0;
+   margin-top: 10px;
+  
+  
+}
+.social-icons{
+   padding: 5px;
+  
+}
+.address-info{
+    color:#ffc119;
+    text-align: center;
+    padding: 5px;
+}
+.address-info>div>svg>{
+    padding-top: 2px;
+    color: wheat;
+    background-color: aqua;
+}

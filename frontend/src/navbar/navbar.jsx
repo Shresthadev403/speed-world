@@ -83,16 +83,18 @@ console.log(isLoggedIn,"mmmmmmmmmmmmm");
 
 
   return (
-    <AppBar position="static" >
+    <AppBar position="static" sx={{bgcolor:"black",color:"#ffc119",minHeight:"56px"}}  >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
             variant="h6"
             noWrap
             component="div"
-            sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
+            sx={{ mr: 2, display: { xs: 'none', md: 'flex'} }}
           >
-            <Link to='/' style={{textDecoration:"none",color:"wheat"}}>Logo</Link>
+            <Link to='/' style={{textDecoration:"none",color:"wheat"}}>
+              <img src="./helmet.svg" alt="ll" style={{width:"30px"}} />
+            </Link>
             
           </Typography>
 
@@ -136,9 +138,13 @@ console.log(isLoggedIn,"mmmmmmmmmmmmm");
             variant="h6"
             noWrap
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
+            sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } ,mt:"10px"}}
           >
-            <Link to='/' style={{textDecoration:"none",color:"wheat"}}>Logo</Link>
+            <Link to='/' style={{textDecoration:"none",color:"wheat"}}>
+              <span style={{paddingRight:"5px",paddingTop:"0"}}> Speedworld</span>
+             
+            <img src="./helmet.svg" alt="ll" style={{width:"30px",}} />
+              </Link>
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (

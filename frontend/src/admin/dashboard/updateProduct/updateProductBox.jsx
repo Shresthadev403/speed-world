@@ -148,7 +148,7 @@ function UpdateProductProductBox(props) {
 
         <div className="update-container-box">
           <div className="Container-header">Update Product</div>
-          <form className="Form" onSubmit={handleSubmit}>
+          <form className="form-update" onSubmit={handleSubmit}>
             <div className="productName">
               <DriveFileRenameOutlineIcon />
               <input
@@ -172,9 +172,9 @@ function UpdateProductProductBox(props) {
             </div>
             <div>
               <ClassIcon />
-              <FormControl sx={{ m: 0.5, minWidth: 100, width: "100vmax" }}>
+              <FormControl sx={{ m: 0.5,  width: "100vmax",backgroundColor:"white" ,minWidth: 100,}}>
                 <InputLabel
-                  sx={{ font: "300 2.7vmin cursive" }}
+                  sx={{ font: "300 1em roboto" }}
                   className="category"
                 >
                   Category
@@ -190,7 +190,7 @@ function UpdateProductProductBox(props) {
                   sx={{
                     minWidth: 120,
                     maxHeight: 50,
-                    paddingLeft: "2vmax",
+                    paddingLeft: "1.9em",
                   }}
                 >
                   {categories.map((category) => {
@@ -247,7 +247,7 @@ function UpdateProductProductBox(props) {
                 />
               </div>
             </div>
-            <input type="submit" value="Update" className="submitBtn" />
+            <input type="submit" value="Update" className="submitBtn" style={{ backgroundColor:"#ffc119",color:"white",paddingTop:"0px"}} />
           </form>
         </div>
       </div>

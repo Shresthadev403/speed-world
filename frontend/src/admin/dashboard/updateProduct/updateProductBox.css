@@ -1,27 +1,143 @@
-.update-container{
-background-color: rgb(250, 244, 244);
-width: 90%;
-margin-left: 5%;
-margin-right: 5%;
-
-
-
+.update-container {
+  background-color: whitesmoke;
+  width: 100%;
+ 
+ 
 }
-.update-container-box{
-    /* background-color: blue; */
-    margin: 50px;
-    max-height: 500px;
-    overflow-y: scroll;
-    
+.update-container-box {
+  /* background-color: blue; */
+  margin: 50px;
+  max-height: 500px;
+  overflow-y: scroll;
+  position: relative;
+}
+.div-item {
+  font: 400 1.5em roboto;
+}
+
+.form-update {
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 1.7em;
+  transition: all 0.5s;
+ 
+ 
    
-
-}
-.div-item{
-    font: 400 1.5vmax cursive;
-}
-
-@media screen and (max-width: 600px){
-    .div-item{
-        font: 400 2.5vmax cursive;
+  }
+  
+ .form-update > div {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    font-size: large;
+    padding: 5px;
+  }
+  
+ .form-update > div > input {
+    
+   padding-left: 2.5em;
+   padding-right: 2.5em;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.267);
+    border-radius: 4px;
+    font: 300 0.9em roboto;
+    outline: none;
+    min-height: 55px;
+    font-size: large;
+  }
+  
+ .form-update > div > svg {
+    position: absolute;
+    transform: translateX(1vmax);
+    font-size: 1.5em;
+    color: rgba(0, 0, 0, 0.623);
+  }
+  
+  
+  
+ 
+  
+ 
+  
+ 
+ 
+  
+ 
+  
+  
+  
+  
+  
+  .submitBtn {
+    border: none;
+    background-color: rgb(218, 150, 26);
+    color: white;
+    font: 300 1.9em "Roboto";
+    width: 100%;
+    padding: 0.8em;
+    cursor: pointer;
+    transition: all 0.5s;
+    border-radius: 4px;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.219);
+  }
+  
+  .submitBtn:hover {
+    background-color: rgb(107, 221, 30);
+  }
+  
+  @media screen and (max-width: 800px) {
+  
+    
+    
+  
+   .form-update > div > input {
+     
+      font: 300 0.9em roboto;
+      padding-left: 1.7em;
+     
+      
     }
+  
+   .form-update > div > svg {
+      font-size: 1.2em;
+      z-index: 1;
+    }
+  
+  
+    .submitBtn {
+      font: 300 1em "Roboto";
+      padding: 1em;
+      height: 1.5em;
+      margin: 0.5em;
+    }
+  }
+  
+
+@media screen and (max-width: 600px) {
+  .div-item {
+    font: 400 0.6em roboto;
+  }
+  .form-update{
+    margin: 0px;
+    /* background-color: blue; */
+    padding: 0.9em;
+  }
+  
+}
+@media screen and (max-height: 500px) {
+  .form-update{
+    min-height: 608px;
+  }
+  
+}
+@media screen and (max-height: 445px) {
+  .form-update{
+    min-height: 645px;
+  }
+  
 }

@@ -73,8 +73,15 @@ function Product(props) {
   const makeComment = (comment, rating) => {
     console.log(comment);
     sendReviews(productId, comment, rating).then((data) => {
-      console.log(data);
-      window.location.reload(false);
+      if (data.sucess) {
+        console.log(data);
+        window.location.reload(false);
+      } else {
+        enqueueSnackbar("please login to rate our product", {
+          variant: "error",
+          autoHideDuration: 2000,
+        });
+      }
     });
   };
 
@@ -96,11 +103,11 @@ function Product(props) {
           variant: "success",
           autoHideDuration: 2000,
         });
-        navigate("/products");
+        navigate("/Products");
       } else {
         enqueueSnackbar(data.error, {
           variant: "error",
-          autoHideDuration: 3000,
+          autoHideDuration: 2000,
         });
       }
     });
@@ -132,7 +139,14 @@ function Product(props) {
             comments={comments}
           />
         )}
-        {showProductUpdateBox && <UpdateProductProductBox productId={productId} showUpdateProductBox={showUpdateProductBox} />}
+      </div>
+      <div className="update-box">
+        {showProductUpdateBox && (
+          <UpdateProductProductBox
+            productId={productId}
+            showUpdateProductBox={showUpdateProductBox}
+          />
+        )}
       </div>
       <div className="container">
         <div className="detailbox">
@@ -146,9 +160,9 @@ function Product(props) {
               p: 1,
               m: 1,
               bgcolor: "background.paper",
-              width: "50vw",
-              height: "50vw",
-              minWidth: "280px",
+              width: "80vw",
+              height: "80vw",
+              minWidth: "250px",
               maxWidth: "400px",
               maxHeight: "450px",
               minHeight: "280px",
@@ -166,12 +180,12 @@ function Product(props) {
               p: 1,
               m: 1,
               bgcolor: "background.paper",
-              width: "50vw",
+              width: "80vw",
 
-              minWidth: "280px",
+              minWidth: "250px",
               maxWidth: "400px",
               maxHeight: "450px",
-              minHeight: "280px",
+              minHeight: "350px",
               borderRadius: 1,
             }}
           >
@@ -208,7 +222,7 @@ function Product(props) {
                 >
                   Reviews: {product && product.numOfReviews}
                 </Button>
-                <Button size="large">Share</Button>
+                {/* <Button size="large">Share</Button> */}
               </CardActions>
               {isLoggedIn && isAdmin && (
                 <CardActions sx={{ width: "100%" }}>
@@ -251,12 +265,12 @@ function Product(props) {
 
               p: 1,
               m: 1,
-              bgcolor: "background.paper",
-              width: "50vw",
-              height: "auto",
-              minWidth: "280px",
 
-              minHeight: "280px",
+              width: "80vw",
+
+              minWidth: "250px",
+              maxWidth: "900px",
+
               borderRadius: 1,
             }}
           >

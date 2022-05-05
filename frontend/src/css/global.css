@@ -1,3 +1,7 @@
+.component{
+  min-height: 100vh;
+}
+
 .loading{
     display: flex;
     align-items: center;
@@ -49,7 +53,7 @@ width: 33%;
     width: 100%;
   }
   .flex-data{
-    font: 400 1.7vmax cursive;
+    font: 400 1.7vmax roboto;
     text-align: left;
   }
   

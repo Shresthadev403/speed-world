@@ -88,7 +88,7 @@ function OrderList(props) {
       if (data.sucess) {
         enqueueSnackbar(data.message, {
           variant: "success",
-          autoHideDuration: 4000,
+          autoHideDuration: 2000,
         });
         props.changeIsRendered();
       }
@@ -173,7 +173,7 @@ function OrderList(props) {
         </AccordionSummary>
         {}
         <AccordionDetails theme={theme}>
-          <div className="flex-container">
+          <div className="flex-container"  style={{ backgroundColor: "rgb(206, 207, 233)" }}>
             {productDetails && (
               <Box
                 className="flex-container-left"

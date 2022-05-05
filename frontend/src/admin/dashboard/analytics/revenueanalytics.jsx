@@ -35,19 +35,21 @@ function RevenueAnalytics(props) {
   }
   return (
    
-      <ResponsiveContainer width="90%" height="70%" maxHeight={400}>
+      <ResponsiveContainer width="90%" height="40%" maxHeight={400} minHeight={200} minWidth={100}
+      
+      >
       <LineChart
         width={500}
-        height={300}
+        height={700}
        
         data={props.revenueData}
       
-        margin={{ top: 20, right: 30, left: 50, bottom: 0, }}>
+        margin={{ top: 20, right: 10, left: 50, bottom: 0, }}>
           
       
         <Line type="monotone" dataKey="totalPrice" stroke="#8884d8" />
         <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-        <XAxis  dataKey="deliveredAt" axisLine={false} tickLine={false} tickFormatter={date => formatDate(new Date(date))}/>
+        <XAxis  dataKey="deliveredAt"  axisLine={false} tickLine={false} tickFormatter={date => formatDate(new Date(date))}/>
         <YAxis />
         <Tooltip />
       </LineChart>

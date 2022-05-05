@@ -1,5 +1,5 @@
 import "./signUpLogin.css";
-
+import "../css/global.css"
 import React, { Fragment, useRef, useState, useEffect } from "react";
 import "./signUpLogin.css";
 import { Link, useNavigate } from "react-router-dom";
@@ -27,14 +27,14 @@ function ForgetPassowrd() {
       } else {
         enqueueSnackbar(data.error, {
           variant: "error",
-          autoHideDuration: 3000,
+          autoHideDuration: 2000,
         });
       }
     });
   };
 
   return (
-    <div>
+    <div className="component">
       <div
         style={{
           width: "100%",
