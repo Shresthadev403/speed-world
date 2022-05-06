@@ -61,6 +61,7 @@ function Products() {
     //  console.log(data, "data");
       setProducts(data.products);
     });
+    window.scrollTo(0, 0);
   }, [category, page]);
 
   return (

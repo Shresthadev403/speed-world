@@ -10,6 +10,9 @@ import CircularProgress from "@mui/material/CircularProgress";
 import { login, signUp } from "../controllers/userController";
 import defaultAvatar from "../static/avatar.png"
 import { useSnackbar } from "notistack";
+import { resizeFile } from "../global/imageSizeReducer";
+
+
 
 
 function Login (props) {
@@ -84,18 +87,15 @@ function Login (props) {
    })
   };
 
-  const registerDataChange = (e) => {
+  const registerDataChange = async(e) => {
     if (e.target.name === "avatar") {
-      const reader = new FileReader();
-
-      reader.onload = () => {
-        if (reader.readyState === 2) {
-          setAvatarPreview(reader.result);
-          setAvatar(reader.result);
-        }
-      };
-
-      reader.readAsDataURL(e.target.files[0]);
+      const file = e.target.files[0];
+       resizeFile(file).then(image=>{
+         console.log(image);
+         setAvatarPreview(image);
+         setAvatar(image);
+       });
+      
     } else {
       setUser({ ...user, [e.target.name]: e.target.value });
     }

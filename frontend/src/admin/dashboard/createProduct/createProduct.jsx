@@ -12,6 +12,7 @@ import ClassIcon from '@mui/icons-material/Class';
 import { createProduct } from "../../../controllers/adminController";
 import CircularProgress from '@mui/material/CircularProgress';
 import { SnackbarProvider, useSnackbar } from 'notistack';
+import { resizeFile } from "../../../global/imageSizeReducer";
 
 const categories = ["helmet", "gear", "glubs", "others"];
 
@@ -34,16 +35,14 @@ function CreateProduct(props) {
     e.preventDefault();
     console.log("done");
     if (e.target.name === "productImage") {
-      const reader = new FileReader();
+      const file = e.target.files[0];
+      resizeFile(file).then(image=>{
+        console.log(image);
+        setImagePreview(image);
+      });
 
-      reader.onload = () => {
-        if (reader.readyState === 2) {
-          setImagePreview(reader.result);
-         
-        }
-      };
-
-      reader.readAsDataURL(e.target.files[0]);
+     
+     
     } else {
       console.log(e.target.name);
       setProduct({ ...product, [e.target.name]: e.target.value });

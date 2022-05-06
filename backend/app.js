@@ -19,7 +19,8 @@ app.use(morgan('tiny'));
 app.use(cookieParser());
 app.use(cors({origin: true, credentials: true, }));
 app.use(fileUpload());
-app.use(express.urlencoded({limit:'50mb',extended:true}));
+app.use(express.urlencoded({limit:'10mb',extended:true}));
+app.use(express.json({limit:'10mb', extended: true}));
 
 app.use(function(req, res, next) {
     res.header('Access-Control-Allow-Credentials', true);

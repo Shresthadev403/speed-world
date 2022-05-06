@@ -13,6 +13,7 @@ exports.createNewProduct = async(req, res, next) => {
   
 
   // upload avatar imgage to cloudinary
+  console.log(productImageUpload);
   const mycloud = await cloudinary.v2.uploader.upload(productImageUpload, {
     folder: "products",
     width: 400,
@@ -120,6 +121,8 @@ exports.deleteProduct = (req, res, next) => {
   Product.findByIdAndDelete(req.params.id)
     .then((product) => {
       if (product) {
+       // console.log(product);
+        cloudinary.uploader.destroy(product.images[0].public_id, function(result) { console.log(result) });
         return res
           .status(200)
           .json({ sucess: true, message: "product deleted sucessfully" });

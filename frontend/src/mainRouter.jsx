@@ -19,6 +19,7 @@ import ResetPassword from "./user/resetPassword";
 import Footer from "./footer/footer";
 import TermsAndCondition from "./termsAndCondition/termsAndCondition";
 import PrivacyPolicy from "./privacyPolicy/privacyPolicy";
+import ScrollToTop from "./ScrollToTop/scrollToTop";
 
 
 function MainRouter() {
@@ -53,7 +54,7 @@ SetIsLoggedIn(status);
       >
       <Navbar isLoggedIn={isLoggedIn} changeLoginStatus={changeLoginStatus} isAdmin={isAdmin} />
       
-     
+     <ScrollToTop>
       <Routes>
         <Route exact path="/" element={<Home/>}></Route>
         <Route exact path="/Login" element={<Login isLoggedIn={isLoggedIn} changeLoginStatus={changeLoginStatus}/>}></Route>
@@ -76,6 +77,7 @@ SetIsLoggedIn(status);
         <Route exact path="/privacypolicy" element={<PrivacyPolicy />}></Route>
 
       </Routes>
+      </ScrollToTop>
    
   
     
