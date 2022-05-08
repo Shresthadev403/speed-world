@@ -61,10 +61,8 @@ const closedMixin = (theme) => ({
     duration: theme.transitions.duration.leavingScreen,
   }),
   overflowX: "hidden",
-  width: `calc(${theme.spacing(7)} + 1px)`,
-  [theme.breakpoints.up("sm")]: {
-    width: `calc(${theme.spacing(8)} + 1px)`,
-  },
+  width:" 60px",
+  
 });
 
 const DrawerHeader = styled("div")(({ theme }) => ({
@@ -113,6 +111,7 @@ export default function Dashboard() {
       const target=event.currentTarget.getAttribute("name")
     //  console.log(target);
       setActiveDashboardComponent(target);
+      handleDrawerClose();
   }
 
   React.useEffect(()=>{
@@ -124,7 +123,7 @@ export default function Dashboard() {
   return (
     <div className="component">
    
-      <Box sx={{ display: "flex" }}>
+      <div style={{ display: "flex" }}>
         <CssBaseline />
        
         <Drawer
@@ -216,10 +215,10 @@ export default function Dashboard() {
             ))}
           </List>
         </Drawer>
-        <div style={{width:"100%"}}>
-        <Box component="main" sx={{ flexGrow: 1,  }} >
+        <div style={{width: "calc(100% - 60px)",position:"absolute",marginLeft:"60px"}}>
+        <Box component="main" sx={{ flexGrow: 1,overflowY:"scroll",maxHeight:"500px",overflowX:"hidden" }} >
          
-         <DrawerHeader />
+        
          {
              activeDashboardComponent=="Create Product"?<CreateProduct/>:""
              
@@ -253,7 +252,7 @@ export default function Dashboard() {
         </div>
         
 
-      </Box>
+      </div>
     </div>
   );
 }

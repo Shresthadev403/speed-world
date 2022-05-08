@@ -32,7 +32,7 @@
   border-radius: 5px;
   padding: 2px;
   min-width: 300px;
-  font: 400 2vmax roboto;
+  font: 400 1em roboto;
   padding-top: 2px;
 }
 
@@ -42,15 +42,32 @@
     flex-direction: column;
   }
   .details {
-    font: 400 2.7vmax roboto;
+    font: 400 1em roboto;
     margin: auto;
+    min-width: 200px;
 
     width: 100%;
     text-align: center;
   }
   .img {
+    margin: 0px;
+    margin-top: 5px;
     width: 100%;
-
+    min-width: 200px;
+    min-height: 200px;
     text-align: center;
+  }
+  .img > img {
+    min-width: 200px;
+    min-height: 200px;
+    width: 100%;
+    border-radius: 5px;
+    margin: 2px;
+    max-width: 300px;
+    max-height: 300px;
+  
+    margin-left: 0px;
+    padding-right: 2px;
+
   }
 }

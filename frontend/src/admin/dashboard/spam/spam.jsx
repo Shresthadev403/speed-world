@@ -39,7 +39,7 @@ const changeIsRendered=()=>{
   }
 
   return (
-    <div style={{backgroundColor:"rgb(235 236 244)"}}>
+    <div style={{backgroundColor:"rgb(235 236 244)",marginBottom:"2px"}}>
        <div className="flex-heading">Spam</div>
       {orders.map((order, index) => {
         return (

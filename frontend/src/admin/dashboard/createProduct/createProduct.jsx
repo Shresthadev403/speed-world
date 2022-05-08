@@ -86,7 +86,7 @@ if(isLoading){
   </div>)
 }
   return (
-    <div >
+    <div  className="component">
         <div className="Container-x-header">Create Product</div>
       <div className="Container-x">
     
