@@ -14,7 +14,8 @@ if(!props.pieData){
       <div  className="piechart">
       <Chart
         width={"60vw"}
-        height={"60vw"}
+       height={"60vh"}
+        
        
         
        

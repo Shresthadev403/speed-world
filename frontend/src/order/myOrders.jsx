@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react'
 import { getMyOrders } from '../controllers/userController';
 import MyOrderList from './myOrderList';
+import '../css/global.css'
 
 
 
@@ -19,15 +20,15 @@ function MyOrder() {
  console.log(orders);
 
  if(!orders || orders.length==0){
-     return<div style={{width:"100%",textAlign:"center"}}>You have not ordered any items yet</div>
+     return<div className='component' style={{width:"100%",textAlign:"center"}}>You have not ordered any items yet</div>
  }
-    return ( <>
+    return ( <div className='component'>
    {
        orders.map((order,index)=>{
            return <MyOrderList key={order._id} order={order}/>
        })
    }
-    </> );
+    </div> );
 }
 
 export default MyOrder;

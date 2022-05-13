@@ -53,6 +53,7 @@ const openedMixin = (theme) => ({
     duration: theme.transitions.duration.enteringScreen,
   }),
   overflowX: "hidden",
+  height:"100vh"
 });
 
 const closedMixin = (theme) => ({
@@ -62,6 +63,7 @@ const closedMixin = (theme) => ({
   }),
   overflowX: "hidden",
   width:" 60px",
+  height:"100vh"
   
 });
 
@@ -123,7 +125,7 @@ export default function Dashboard() {
   return (
     <div className="component">
    
-      <div style={{ display: "flex" }}>
+      <div style={{ display: "flex",height:"100vh"}}>
         <CssBaseline />
        
         <Drawer
@@ -216,7 +218,7 @@ export default function Dashboard() {
           </List>
         </Drawer>
         <div style={{width: "calc(100% - 60px)",position:"absolute",marginLeft:"60px"}}>
-        <Box component="main" sx={{ flexGrow: 1,overflowY:"scroll",maxHeight:"500px",overflowX:"hidden" }} >
+        <Box component="main" sx={{ flexGrow: 1,overflowY:"scroll",maxHeight:"100vh",overflowX:"hidden" }} >
          
         
          {
