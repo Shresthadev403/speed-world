@@ -3,7 +3,7 @@ This website is hosted on https://speedworld-helmets.herokuapp.com
 ## For admin controls Login with following details:
  ### email:admin@gmail.com
  ### password:A1234567
-  
+## Read this postman collection https://github.com/Shresthadev403/E-Commerce-Website/blob/master/Ecommerce%20Website.postman_collection.json for backend api
 ## To get started with project
   ## clone the project 
  ## install npm dependencies with command
